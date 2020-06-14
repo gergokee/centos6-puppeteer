@@ -8,12 +8,8 @@ Repo is based on [Google Puppeteer](https://github.com/GoogleChrome/puppeteer) a
 
 ## before install
 Make sure you upgraded your Centos 6 to latest:
-Get latest repo:
 ```
 rpm -Uvh https://www.elrepo.org/elrepo-release-6-8.el6.elrepo.noarch.rpm
-```
-Update Centos 6 to latest:
-```
 yum clean all && yum update
 reboot
 ```
