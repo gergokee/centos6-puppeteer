@@ -9,18 +9,18 @@ Repo is based on [Google Puppeteer](https://github.com/GoogleChrome/puppeteer) a
 ## before install
 Make sure you upgraded your Centos 6 to latest:
 ```
-#yum clean all && yum update
-#reboot
+yum clean all && yum update
+reboot
 ```
 After check version:
 ```
-#cat /etc/redhat-release
+cat /etc/redhat-release
 CentOS release 6.10 (Final)
 ```
 ## install
 
 ```
-#docker pull gergokee/centos6-puppeteer:latest
+docker pull gergokee/centos6-puppeteer:latest
 
 ```
 
