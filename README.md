@@ -6,10 +6,21 @@ If you can, please use Centos 7 or higher but cause Centos 6 is EOL. Otherwise y
 
 Repo is based on [Google Puppeteer](https://github.com/GoogleChrome/puppeteer) and  [alekzonder/docker-puppeteer] (https://github.com/alekzonder/docker-puppeteer)
 
+## before install
+Make sure you upgraded your Centos 6 to latest:
+```
+#yum clean all && yum update
+#reboot
+```
+After check version:
+```
+#cat /etc/redhat-release
+CentOS release 6.10 (Final)
+```
 ## install
 
 ```
-docker pull gergokee/centos6-puppeteer:latest
+#docker pull gergokee/centos6-puppeteer:latest
 
 ```
 
