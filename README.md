@@ -4,7 +4,7 @@ docker image with  [Google Puppeteer](https://github.com/GoogleChrome/puppeteer)
 
 If you can, please use Centos 7 or higher but cause Centos 6 is EOL. Otherwise you can use this tool for Centos6.
 
-Repo is based on [Google Puppeteer](https://github.com/GoogleChrome/puppeteer) and  [docker-puppeteer] (https://github.com/alekzonder/docker-puppeteer)
+Repo is based on [Google Puppeteer](https://github.com/GoogleChrome/puppeteer) and [docker-puppeteer](https://github.com/alekzonder/docker-puppeteer)
 
 ## before install
 Make sure you upgraded your Centos 6 to latest:
