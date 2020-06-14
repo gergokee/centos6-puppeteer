@@ -36,14 +36,9 @@ RUN npm -y install --save puppeteer
 #chrome-sandbox hack:
 #RUN cd /node_modules/puppeteer/.local-chromium/linux-*/chrome-linux && mv chrome_sandbox chrome-sandbox && chown root chrome-sandbox && chmod 4755 chrome-sandbox
 
-
 ENV NODE_PATH="/usr/lib/node_modules:${NODE_PATH}"
-ENV PATH="/tools:${PATH}"
-
 
 RUN groupadd -r pptruser && useradd -r -g pptruser -G audio,video pptruser
-
-COPY ./tools /tools
 
 # Set language to UTF8
 ENV LANG="C.UTF-8"
@@ -51,13 +46,10 @@ ENV LANG="C.UTF-8"
 WORKDIR /app
 
 # Add user so we don't need --no-sandbox.
-RUN mkdir /screenshots \
-	&& mkdir -p /home/pptruser/Downloads \
+RUN mkdir -p /home/pptruser/Downloads \
     && chown -R pptruser:pptruser /home/pptruser \
     && chown -R pptruser:pptruser /usr/lib/node_modules \
-    && chown -R pptruser:pptruser /screenshots \
-    && chown -R pptruser:pptruser /app \
-    && chown -R pptruser:pptruser /tools
+    && chown -R pptruser:pptruser /app 
 
 # Run everything after as non-privileged user, for security reasons !!!
 USER pptruser
@@ -66,8 +58,6 @@ USER pptruser
 # https://docs.docker.com/engine/reference/run/#additional-groups
 
 ENTRYPOINT ["dumb-init", "--"]
-
-
 
 CMD ["node", "index.js"]
 
