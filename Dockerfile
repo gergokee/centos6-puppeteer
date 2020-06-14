@@ -2,7 +2,7 @@ FROM centos:7
 
 MAINTAINER gergokee
 
-LABEL Remarks="This is a dockerfile example for puppeteer on Centos 6"
+LABEL Remarks="This is a dockerfile example for puppeteer on Centos 6 Host and Image is based on Centos7"
 
 #login as root to perform yum
 USER root
